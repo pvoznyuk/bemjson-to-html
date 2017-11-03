@@ -9,6 +9,7 @@ function BEMJSON (options) {
     options.jsAttrName = options.jsAttrName || _jsAttrName;
     options.jsAttrIsJs = options.jsAttrScheme === 'js';
     options.defaultTag = options.defaultTag || _defaultTag;
+    options.modificatorSeparator = options.modificatorSeparator || '_';
 
     this._options = options;
 }
@@ -20,14 +21,15 @@ BEMJSON.prototype.bemClasses = function bemClasses(bemjson, argBlock) {
     var base = block + (bemjson.elem ? '__' + bemjson.elem : '');
     var res = (base === argBlock) ? '' : base;
     var mods = bemjson.elem ? bemjson.elemMods : bemjson.mods;
-
+    var modSep = this._options.modificatorSeparator;
+    
     if (mods) {
         for (var i in mods) {
             if (typeof mods[i] === 'number') {
                 mods[i] += '';
             }
             if (mods[i]) {
-                res += ' ' + base + '_' + i + (mods[i] === true ? '' : '_' + mods[i]);
+                res += ' ' + base + modSep + i + (mods[i] === true ? '' : modSep + mods[i]);
             }
         }
     }
