@@ -8,19 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/floatdrop/bemjson-to-html"
+    "url": "https://github.com/pvoznyuk/bemjson-to-html"
   },
   "keywords": [
+    "BEM",
     "BEMJSON",
     "HTML",
     "serialize"
   ],
-  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>, Pavlo Vozniuk <pavlo.vozniuk@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/floatdrop/bemjson-to-html/issues"
+    "url": "https://github.com/pvoznyuk/bemjson-to-html/issues"
   },
-  "homepage": "https://github.com/floatdrop/bemjson-to-html",
+  "homepage": "https://github.com/pvoznyuk/bemjson-to-html",
   "devDependencies": {
     "bh": "^3.2.2",
     "enb": "^0.13.4",
