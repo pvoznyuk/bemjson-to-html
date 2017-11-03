@@ -1,4 +1,4 @@
-# bemjson-to-html [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# bemjson-to-html 
 > BEMJSON to HTML serializer
 
 This is optimized part of jsot-bh for generation HTML from constructed BEMJSON.
