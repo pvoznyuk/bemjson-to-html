@@ -5,6 +5,10 @@ This is optimized part of jsot-bh for generation HTML from constructed BEMJSON.
 
 ## API
 
+### Installing
+
+`npm install bem-json-to-html --save`
+
 ### new BEMJSON([options])
 
 Creates serializer object.
@@ -45,13 +49,7 @@ stringify
 
 ## License
 
-MIT (c) [Vesvolod Strukchinsky](floatdrop@gmail.com)
+MIT (c) [Vesvolod Strukchinsky](floatdrop@gmail.com), [Pavlo Vozniuk](pavlo.vozniuk@gmail.com)
 
-[npm-url]: https://npmjs.org/package/bemjson-to-html
-[npm-image]: http://img.shields.io/npm/v/bemjson-to-html.svg
-
-[travis-url]: https://travis-ci.org/floatdrop/bemjson-to-html
-[travis-image]: http://img.shields.io/travis/floatdrop/bemjson-to-html.svg
-
-[depstat-url]: https://david-dm.org/floatdrop/bemjson-to-html
-[depstat-image]: https://david-dm.org/floatdrop/bemjson-to-html.svg?theme=shields.io
+[npm-url]: https://npmjs.org/package/bem-json-to-html
+[npm-image]: http://img.shields.io/npm/v/bem-json-to-html.svg
