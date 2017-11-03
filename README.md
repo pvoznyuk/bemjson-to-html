@@ -14,6 +14,7 @@ __Options__:
  * `jsAttrScheme` _Boolean_ - If `js`, attribute with js params will be prefixed with `return ` (default: `js`).
  * `jsAttrName` _String_ - Specifies name of attribute, that will contain `jsParams` (default: `onclick`).
  * `defaultTag` _String_ - Default tag name for block without `tag` property (default: `div`).
+ * `modificatorSeparator` _String_ - Suffix to use for mods instead of default `_` one. (E.g. `{modificatorSeparator: '--'}`).
 
 ### BEMJSON.toHtml(bemjson)
 
