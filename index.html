@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BEMJSON to HTML serializer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bundle.js"></script>
+  </head>
+  <body>
+
+    <style>
+      textarea {
+        width: 100%;
+        height: 400px;
+        resize: vertical;
+        font-family: 'Inconsolata', monospace;
+      }
+    </style>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <h1>BEMJSON to HTML serializer</h1>
+
+            <p><a href="https://github.com/pvoznyuk/bemjson-to-html">
+              https://github.com/pvoznyuk/bemjson-to-html</a>
+            </p>
+
+            <h2>Examples:</h2>
+            <p>JSON / JS object on input</p>
+        </div>
+
+        <div class="col-md-5 col-xs-12">
+          <textarea id="source">{
+    block: 'button',
+    content: [
+        { elem: 'control',
+          content: [{
+            elem: 'default',
+            content: "COPY",
+            elemMods: {
+              fixed: false
+            }
+          }, {
+            elem: 'default',
+            tag: 'img',
+            mods: {
+              active: true,
+              selected: true
+            }
+          }]
+        }
+    ]
+}</textarea>
+        </div>
+
+        <div class="col-md-2 col-xs-12">
+          <br/>
+          <button class="btn btn-primary btn-block" onClick="serialize()">To HTML &rarr;</button>
+          <br/>
+        </div>
+
+        <div class="col-md-5 col-xs-12">
+          <textarea id="result"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      function serialize(target) {
+          var bemjson = new BEMJSON({
+            modificatorSeparator: '--',
+            addDefautTagAttributes: true
+          });
+
+          try {
+            var json = html = eval('(' + $('#source').val() + ')');
+            var html = bemjson.toHtml( json );
+            $('#result').html(html);
+          } catch (err) {
+            $('#result').html('');
+            alert('Error parsing JSON code');
+          }
+      }
+
+      serialize();
+    </script>
+
+  </body>
+</html>

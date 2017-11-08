@@ -1,7 +1,9 @@
-# bemjson-to-html [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+﻿# bemjson-to-html 
 > BEMJSON to HTML serializer
 
 This is optimized part of jsot-bh for generation HTML from constructed BEMJSON.
+
+[DEMO](https://pvoznyuk.github.io/bemjson-to-html/)
 
 ## API
 
@@ -15,10 +17,11 @@ Creates serializer object.
 
 __Options__:
 
- * `jsAttrScheme` _Boolean_ - If `js`, attribute with js params will be prefixed with `return ` (default: `js`).
+ * `jsAttrScheme` _String_ - If `js`, attribute with js params will be prefixed with `return ` (default: `js`).
  * `jsAttrName` _String_ - Specifies name of attribute, that will contain `jsParams` (default: `onclick`).
  * `defaultTag` _String_ - Default tag name for block without `tag` property (default: `div`).
  * `modificatorSeparator` _String_ - Suffix to use for mods instead of default `_` one. (E.g. `{modificatorSeparator: '--'}`).
+ * `addDefautTagAttributes` _Boolean_ - Add default tags attributes like `src`, `href` (defaukt: `false`).
 
 ### BEMJSON.toHtml(bemjson)
 
